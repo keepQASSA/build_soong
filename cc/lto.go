@@ -107,8 +107,7 @@ func (lto *lto) flags(ctx BaseModuleContext, flags Flags) Flags {
 		// If the module does not have a profile, be conservative and do not inline
 		// or unroll loops during LTO, in order to prevent significant size bloat.
 		if !ctx.isPgoCompile() {
-			flags.LdFlags = append(flags.LdFlags, "-Wl,-plugin-opt,-inline-threshold=0")
-			flags.LdFlags = append(flags.LdFlags, "-Wl,-plugin-opt,-unroll-threshold=0")
+			flags.LdFlags = append(flags.LdFlags, "-Wl,-plugin-opt,-import-instr-limit=10")
 		}
 	}
 	return flags
