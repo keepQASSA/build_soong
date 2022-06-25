@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"aosqp/soong/android"
+	"qassa/soong/android"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -127,8 +127,8 @@ type variableProperties struct {
 			Srcs         []string
 		}
 
-		// include Aosqp variables
-		Aosqp android.Product_variables
+		// include Qassa variables
+		Qassa android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -295,8 +295,8 @@ type productVariables struct {
 
 	TargetFSConfigGen []string `json:",omitempty"`
 
-	// include Aosqp variables
-	Aosqp android.ProductVariables
+	// include Qassa variables
+	Qassa android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {

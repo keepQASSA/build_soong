@@ -887,7 +887,7 @@ func (c *deviceConfig) TargetSpecificHeaderPath() string {
 }
 
 func (c *deviceConfig) SpecificCameraParametersLibrary() string {
-	return String(c.config.productVariables.Aosqp.Specific_camera_parameter_library)
+	return String(c.config.productVariables.Qassa.Specific_camera_parameter_library)
 }
 
 func (c *deviceConfig) NativeCoverageEnabled() bool {
